@@ -1,9 +1,4 @@
-   /** @license
-   ** remixml-pathencode v4.0.0: Encodes generic text lossy to URI component
-  ** Copyright (c) 2018-2021 by Stephen R. van den Berg <srb@cuci.nl>
- ** License: ISC OR GPL-3.0
-** Sponsored by: Cubic Circle, The Netherlands
-*/
+/** @license Copyright (c) 2018-2021 by Stephen R. van den Berg <srb@cuci.nl> */
 
 /** @define {number} */ var DEBUG = 1;
 /** @define {number} */ var ALERTS = 0;
@@ -51,19 +46,21 @@
 
   function /** !Object */ factory(/** !Object */ rxml,/** !Object */ diac)
   { toascii = diac["toascii"];
-    rxml["addfilter"]("path", encpath);
+    rxml["add_filter"]("path", encpath);
     return g;
   }
 
+  const /** string */ rxs = "remixml";
+  const /** string */ tdcs = "transdiacritics";
+
   if (typeof define == "function" && define["amd"])
-    define("remixml-pathencode", ["remixml", "transdiacritics"], factory);
+    define("remixml-pathencode", [rxs, tdcs], factory);
   else if (typeof exports == "object")
     O.assign(/** @type{!Object} */(exports),
-     factory(require("remixml"), require("transdiacritics")));
+     factory(require(rxs), require(tdcs)));
   else {
     var W = window;
-    factory(W["Remixml"], W["transdiacritics"]);
-    W["RemixmlPathencode"] = g;
+    W["RemixmlPathencode"] = factory(W["Remixml"], W["Transdiacritics"]);
   }
 
 // Cut BEGIN delete
