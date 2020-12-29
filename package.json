@@ -1,6 +1,6 @@
 {
   "name": "remixml-pathencode",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Lossy encode to URI component",
   "main": "remixml-pathencode.min.js",
   "browser": "remixml-pathencode.min.js",
@@ -21,8 +21,7 @@
   "keywords": [
     "uri",
     "encode",
-    "lossy",
-    "zerodeps"
+    "lossy"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
