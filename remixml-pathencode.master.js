@@ -22,7 +22,7 @@
 
   const O = Object;
 
-  var g =
+  const /** !Object */ g =
   { "encode": encpath,
   };
 
