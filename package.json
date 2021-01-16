@@ -1,9 +1,8 @@
 {
   "name": "remixml-pathencode",
-  "version": "4.0.3",
+  "version": "4.0.5",
   "description": "Lossy encode to URI component",
   "main": "remixml-pathencode.min.js",
-  "browser": "remixml-pathencode.min.js",
   "scripts": {
     "prepare": "./prepfiles"
   },
