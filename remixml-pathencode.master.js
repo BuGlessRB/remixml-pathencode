@@ -26,13 +26,6 @@
   { "encode": encpath,
   };
 
-  if (!O.assign)
-    O.defineProperty(O, "assign",
-    { "value": function(d, s, i)
-      { if (s) for (i in s) d[i] = s[i]; return d;
-      }
-    });
-
   const /** !RegExp */ nonalphanumrx = /(?:&(?:[^&;\s]*;)?|[^&a-z0-9])+/g;
   const /** !RegExp */ pathendingsrx = /^-+|[\u0300-\u036f]+|-+$/g;
 
